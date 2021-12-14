@@ -1,0 +1,32 @@
+#input-container {
+    display: grid;
+    grid-template-columns: 6fr 1fr;
+    gap: 15px;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-bottom: 15px;
+}
+
+#players-container {
+    /* display: grid; */
+    /* grid-template-columns: repeat(3, 1fr); */
+    gap: 5px;
+    display: inline-flex;
+    flex-wrap: wrap;
+    padding-right: 50px;
+    padding-left: 50px;
+}
+
+.player {
+    text-align: center;
+    background-color: orange;
+    margin-bottom: 10px;
+}
+
+.player>p {}
+
+.player>img {
+    background-color: lightgray;
+    width: 350px;
+    height: 254px;
+}
