@@ -51,7 +51,7 @@ router.get('playerStats/:lastName/:firstName', async function(req, res) {
     res.send(playerStats)
 })
 
-router.put('/team', function(req, res){
+router.put('/teams', function(req, res){
     const team = req.body
     if(!team){
         res.status(400).send("Please send a team")
@@ -64,7 +64,7 @@ router.get("./dreamTeam", function(req, res){
     res.send(dreamTeam)
 })
 
-router.post("/roster", function(req, res){
+router.post("/rosters", function(req, res){
     if(dreamTeam.length === 5){
         res.send("Limit reached")
     }

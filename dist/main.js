@@ -36,7 +36,7 @@ $("document").on("click", ".player", function() {
     }
     $.ajax({
         method: `POST`,
-        url: `/roster`,
+        url: `/rosters`,
         data: player,
         success: function(resault) {
             // done
