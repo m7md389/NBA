@@ -1,38 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>NBA</title>
-    <link rel="stylesheet" href="style.css">
-</head>
+    <link rel="stylesheet" href="style.css" />
+  </head>
 
-<body>
-
-
+  <body>
     <div id="input-container">
-        <input type="text" id="team-name-input">
-        <input type="button" value="Get Roster" id="get-roster">
-        <input type="button" value="Dream Team" id="dream-team">
+      <input type="text" id="team-name-input" />
+      <input type="button" value="Get Roster" id="get-roster" />
+      <input type="button" value="Dream Team" id="dream-team" />
     </div>
 
     <div id="players-container"></div>
 
     <script id="players-template" type="text/x-handlebars-template">
-        {{#each player}}
-        <div class="player" data-name="{{firstName}}-{{lastName}}" data-jersey="{{jersey}}">
-            <p>{{firstName}} {{lastName}}<br>{{jersey}}</p>
-            <img src="https://nba-players.herokuapp.com/players/{{lastName}}/{{firstName}}" data-first-name={{firstName}} data-last-name={{lastName}}>
-            <p>{{pos}}</p>
+      {{#each player}}
+        <div
+          class="player"
+          data-name="{{firstName}}-{{lastName}}"
+          data-jersey="{{jersey}}"
+        >
+          <h2>{{firstName}} {{lastName}}</h2>
+          <p class="jersey">{{jersey}}</p>
+          <img
+            src="https://nba-players.herokuapp.com/players/{{lastName}}/{{firstName}}"
+            data-first-name={{firstName}}
+            data-last-name={{lastName}}
+          />
+          <p>{{pos}}</p>
         </div>
-        {{/each}}
+      {{/each}}
     </script>
 
     <script src="./jquery/dist/jquery.js"></script>
     <script src="./handlebars/dist/handlebars.js"></script>
     <script src="main.js"></script>
-</body>
-
+  </body>
 </html>
